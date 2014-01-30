@@ -1,8 +1,4 @@
-class HalfAdder
-  def self.add(a, b)
-    return 0, 0
-  end
-end
+require_relative '../half_adder'
 
 describe HalfAdder do
   it 'exists' do
@@ -48,8 +44,8 @@ describe HalfAdder do
       context 'and input2 is 0' do
         let(:input2) { 0 }
 
-        it 'returns sum as 0' do
-          expect(@sum).to eq 0
+        it 'returns sum as 1' do
+          expect(@sum).to eq 1
         end
 
         it 'returns carry as 0' do
@@ -60,12 +56,12 @@ describe HalfAdder do
       context 'when input2 is 1' do
         let(:input2) { 1 }
 
-        it 'returns sum as 1' do
-          expect(@sum).to eq 1
+        it 'returns sum as 0' do
+          expect(@sum).to eq 0
         end
 
-        it 'returns carry as 0' do
-          expect(@carry).to eq 0
+        it 'returns carry as 1' do
+          expect(@carry).to eq 1
         end
       end
     end
