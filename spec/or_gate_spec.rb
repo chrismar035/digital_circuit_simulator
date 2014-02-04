@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AndGate do
+describe OrGate do
   describe '#compute' do
     let(:output) { subject.compute(input1, input2) }
 
@@ -17,8 +17,8 @@ describe AndGate do
       context 'and the second input is 1' do
         let(:input2) { 1 }
 
-        it 'is 0' do
-          expect(output).to be 0
+        it 'is 1' do
+          expect(output).to be 1
         end
       end
     end
@@ -28,8 +28,8 @@ describe AndGate do
       context 'and the second input is 0' do
         let(:input2) { 0 }
 
-        it 'is 0' do
-          expect(output).to be 0
+        it 'is 1' do
+          expect(output).to be 1
         end
       end
 

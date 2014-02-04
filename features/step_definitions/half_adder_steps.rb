@@ -1,6 +1,6 @@
-require_relative '../../half_adder'
-
 Given(/^(\d+) and (\d+)$/) do |a, b|
+:xa
+
   @a = a.to_i
   @b = b.to_i
 end
